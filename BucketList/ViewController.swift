@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import State
 
 // Модель данных для мечты
 struct Dream {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C26B3B92ABA0680000FF7D6 /* State in Frameworks */ = {isa = PBXBuildFile; productRef = 2C26B3B82ABA0680000FF7D6 /* State */; };
 		2C4D2E632AB9FB03005F731D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E622AB9FB03005F731D /* AppDelegate.swift */; };
 		2C4D2E652AB9FB03005F731D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E642AB9FB03005F731D /* SceneDelegate.swift */; };
 		2C4D2E672AB9FB03005F731D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E662AB9FB03005F731D /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C26B3B72ABA0605000FF7D6 /* State */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = State; path = LocalPackages/State; sourceTree = "<group>"; };
 		2C4D2E5F2AB9FB03005F731D /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4D2E622AB9FB03005F731D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C4D2E642AB9FB03005F731D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C26B3B92ABA0680000FF7D6 /* State in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,13 +79,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C26B3B02ABA0203000FF7D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C26B3B32ABA04F4000FF7D6 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				2C26B3B72ABA0605000FF7D6 /* State */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		2C4D2E562AB9FB03005F731D = {
 			isa = PBXGroup;
 			children = (
+				2C26B3B32ABA04F4000FF7D6 /* Packages */,
 				2C4D2E612AB9FB03005F731D /* BucketList */,
 				2C4D2E782AB9FB04005F731D /* BucketListTests */,
 				2C4D2E822AB9FB04005F731D /* BucketListUITests */,
 				2C4D2E602AB9FB03005F731D /* Products */,
+				2C26B3B02ABA0203000FF7D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +154,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C4D2E892AB9FB04005F731D /* Build configuration list for PBXNativeTarget "BucketList" */;
 			buildPhases = (
+				2C26B3BA2ABA06F8000FF7D6 /* Linter */,
 				2C4D2E5B2AB9FB03005F731D /* Sources */,
 				2C4D2E5C2AB9FB03005F731D /* Frameworks */,
 				2C4D2E5D2AB9FB03005F731D /* Resources */,
@@ -143,6 +164,9 @@
 			dependencies = (
 			);
 			name = BucketList;
+			packageProductDependencies = (
+				2C26B3B82ABA0680000FF7D6 /* State */,
+			);
 			productName = BucketList;
 			productReference = 2C4D2E5F2AB9FB03005F731D /* BucketList.app */;
 			productType = "com.apple.product-type.application";
@@ -252,6 +276,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C26B3BA2ABA06F8000FF7D6 /* Linter */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Linter;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C4D2E5B2AB9FB03005F731D /* Sources */ = {
@@ -602,6 +647,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C26B3B82ABA0680000FF7D6 /* State */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = State;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2C4D2E572AB9FB03005F731D /* Project object */;
 }
