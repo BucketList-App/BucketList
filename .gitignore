@@ -22,7 +22,7 @@ go.work
 
 ### Work directory
 /.idea
-
+/Server/bin/
 ### System Files
 DS_Store
 
