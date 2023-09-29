@@ -1,5 +1,3 @@
 import ReSwift
 
-public enum AppAction: Action {
-
-}
+public enum AppAction: Action {}
