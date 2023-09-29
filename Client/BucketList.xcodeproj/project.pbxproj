@@ -10,6 +10,7 @@
 		2C26B3B92ABA0680000FF7D6 /* State in Frameworks */ = {isa = PBXBuildFile; productRef = 2C26B3B82ABA0680000FF7D6 /* State */; };
 		2C3C490D2AC34E060030E5EC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3C490C2AC34E060030E5EC /* Realm */; };
 		2C3C490F2AC34E060030E5EC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3C490E2AC34E060030E5EC /* RealmSwift */; };
+		2C3CCE372AC709A60030E5EC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE362AC709A60030E5EC /* Core */; };
 		2C4D2E632AB9FB03005F731D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E622AB9FB03005F731D /* AppDelegate.swift */; };
 		2C4D2E652AB9FB03005F731D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E642AB9FB03005F731D /* SceneDelegate.swift */; };
 		2C4D2E672AB9FB03005F731D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E662AB9FB03005F731D /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		2C26B3B72ABA0605000FF7D6 /* State */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = State; path = LocalPackages/State; sourceTree = "<group>"; };
+		2C3CCE352AC7099D0030E5EC /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Core; path = LocalPackages/Core; sourceTree = "<group>"; };
 		2C4D2E5F2AB9FB03005F731D /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4D2E622AB9FB03005F731D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C4D2E642AB9FB03005F731D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C3C490F2AC34E060030E5EC /* RealmSwift in Frameworks */,
+				2C3CCE372AC709A60030E5EC /* Core in Frameworks */,
 				2C3C490D2AC34E060030E5EC /* Realm in Frameworks */,
 				2C26B3B92ABA0680000FF7D6 /* State in Frameworks */,
 			);
@@ -92,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				2C26B3B72ABA0605000FF7D6 /* State */,
+				2C3CCE352AC7099D0030E5EC /* Core */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -201,6 +205,7 @@
 				2C26B3B82ABA0680000FF7D6 /* State */,
 				2C3C490C2AC34E060030E5EC /* Realm */,
 				2C3C490E2AC34E060030E5EC /* RealmSwift */,
+				2C3CCE362AC709A60030E5EC /* Core */,
 			);
 			productName = BucketList;
 			productReference = 2C4D2E5F2AB9FB03005F731D /* BucketList.app */;
@@ -700,6 +705,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2C3C490B2AC34E060030E5EC /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		2C3CCE362AC709A60030E5EC /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
