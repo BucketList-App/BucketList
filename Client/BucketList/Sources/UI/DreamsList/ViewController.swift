@@ -8,6 +8,7 @@
 import UIKit
 import State
 import Core
+import ReSwift
 
 // Модель данных для мечты
 struct Dream {
@@ -81,6 +82,17 @@ class DreamListViewController: UIViewController, UICollectionViewDataSource, UIC
         Dream(title: "Мечта 10", imageName: "dream2")
 
     ]
+
+    private let store: Store<AppState>
+
+    init(store: Store<AppState>) {
+        self.store = store
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

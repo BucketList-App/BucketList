@@ -12,8 +12,7 @@
 		2C3C490F2AC34E060030E5EC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3C490E2AC34E060030E5EC /* RealmSwift */; };
 		2C3CCE372AC709A60030E5EC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE362AC709A60030E5EC /* Core */; };
 		2C3CCE3A2AC710C90030E5EC /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE392AC710C90030E5EC /* Models */; };
-		2C3CCE3E2AC7311B0030E5EC /* DITranquillity in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE3D2AC7311B0030E5EC /* DITranquillity */; };
-		2C3CCE412AC731690030E5EC /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE402AC731690030E5EC /* AppAssembly.swift */; };
+		2C3CCE472AC86B180030E5EC /* DreamsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE462AC86B180030E5EC /* DreamsCoordinator.swift */; };
 		2C4D2E632AB9FB03005F731D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E622AB9FB03005F731D /* AppDelegate.swift */; };
 		2C4D2E652AB9FB03005F731D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E642AB9FB03005F731D /* SceneDelegate.swift */; };
 		2C4D2E672AB9FB03005F731D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E662AB9FB03005F731D /* ViewController.swift */; };
@@ -45,7 +44,7 @@
 		2C26B3B72ABA0605000FF7D6 /* State */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = State; path = LocalPackages/State; sourceTree = "<group>"; };
 		2C3CCE352AC7099D0030E5EC /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Core; path = LocalPackages/Core; sourceTree = "<group>"; };
 		2C3CCE382AC710C00030E5EC /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Models; path = LocalPackages/Models; sourceTree = "<group>"; };
-		2C3CCE402AC731690030E5EC /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		2C3CCE462AC86B180030E5EC /* DreamsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamsCoordinator.swift; sourceTree = "<group>"; };
 		2C4D2E5F2AB9FB03005F731D /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4D2E622AB9FB03005F731D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C4D2E642AB9FB03005F731D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +67,6 @@
 				2C3CCE3A2AC710C90030E5EC /* Models in Frameworks */,
 				2C3C490F2AC34E060030E5EC /* RealmSwift in Frameworks */,
 				2C3CCE372AC709A60030E5EC /* Core in Frameworks */,
-				2C3CCE3E2AC7311B0030E5EC /* DITranquillity in Frameworks */,
 				2C3C490D2AC34E060030E5EC /* Realm in Frameworks */,
 				2C26B3B92ABA0680000FF7D6 /* State in Frameworks */,
 			);
@@ -111,8 +109,9 @@
 		2C3C49112AC3501D0030E5EC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2C3CCE452AC86AF80030E5EC /* Coordinators */,
+				2C3CCE432AC86AD10030E5EC /* UI */,
 				2C3CCE3F2AC731340030E5EC /* DI */,
-				2C4D2E662AB9FB03005F731D /* ViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -147,9 +146,32 @@
 		2C3CCE3F2AC731340030E5EC /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				2C3CCE402AC731690030E5EC /* AppAssembly.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		2C3CCE432AC86AD10030E5EC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2C3CCE442AC86ADD0030E5EC /* DreamsList */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2C3CCE442AC86ADD0030E5EC /* DreamsList */ = {
+			isa = PBXGroup;
+			children = (
+				2C4D2E662AB9FB03005F731D /* ViewController.swift */,
+			);
+			path = DreamsList;
+			sourceTree = "<group>";
+		};
+		2C3CCE452AC86AF80030E5EC /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				2C3CCE462AC86B180030E5EC /* DreamsCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		2C4D2E562AB9FB03005F731D = {
@@ -224,7 +246,6 @@
 				2C3C490E2AC34E060030E5EC /* RealmSwift */,
 				2C3CCE362AC709A60030E5EC /* Core */,
 				2C3CCE392AC710C90030E5EC /* Models */,
-				2C3CCE3D2AC7311B0030E5EC /* DITranquillity */,
 			);
 			productName = BucketList;
 			productReference = 2C4D2E5F2AB9FB03005F731D /* BucketList.app */;
@@ -300,7 +321,6 @@
 			mainGroup = 2C4D2E562AB9FB03005F731D;
 			packageReferences = (
 				2C3C490B2AC34E060030E5EC /* XCRemoteSwiftPackageReference "realm-swift" */,
-				2C3CCE3C2AC7311B0030E5EC /* XCRemoteSwiftPackageReference "DITranquillity" */,
 			);
 			productRefGroup = 2C4D2E602AB9FB03005F731D /* Products */;
 			projectDirPath = "";
@@ -366,8 +386,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C4D2E672AB9FB03005F731D /* ViewController.swift in Sources */,
-				2C3CCE412AC731690030E5EC /* AppAssembly.swift in Sources */,
 				2C4D2E632AB9FB03005F731D /* AppDelegate.swift in Sources */,
+				2C3CCE472AC86B180030E5EC /* DreamsCoordinator.swift in Sources */,
 				2C4D2E652AB9FB03005F731D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,6 +564,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -571,6 +592,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -710,14 +732,6 @@
 				version = 10.42.0;
 			};
 		};
-		2C3CCE3C2AC7311B0030E5EC /* XCRemoteSwiftPackageReference "DITranquillity" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ivlevAstef/DITranquillity";
-			requirement = {
-				kind = exactVersion;
-				version = 4.5.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -742,11 +756,6 @@
 		2C3CCE392AC710C90030E5EC /* Models */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Models;
-		};
-		2C3CCE3D2AC7311B0030E5EC /* DITranquillity */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2C3CCE3C2AC7311B0030E5EC /* XCRemoteSwiftPackageReference "DITranquillity" */;
-			productName = DITranquillity;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

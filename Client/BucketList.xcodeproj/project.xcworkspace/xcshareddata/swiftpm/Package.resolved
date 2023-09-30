@@ -1,15 +1,6 @@
 {
   "pins" : [
     {
-      "identity" : "ditranquillity",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ivlevAstef/DITranquillity",
-      "state" : {
-        "revision" : "fda9b88ab2a2360faddae1cebc4e64f2df495ae0",
-        "version" : "4.5.0"
-      }
-    },
-    {
       "identity" : "realm-core",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core.git",
@@ -34,15 +25,6 @@
       "state" : {
         "revision" : "cb5c3c02f652420ef413dea41e13ac5a76b6c0fd",
         "version" : "6.1.1"
-      }
-    },
-    {
-      "identity" : "swiftlazy",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ivlevAstef/SwiftLazy.git",
-      "state" : {
-        "revision" : "49a47304bb06643fa22d981b6b8301acc5bcb366",
-        "version" : "1.2.0"
       }
     }
   ],

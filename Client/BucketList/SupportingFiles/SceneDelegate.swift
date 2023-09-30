@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import ReSwift
+import State
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -19,7 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
 
-        let rootViewController = DreamListViewController()
+        let store = Store<AppState>(reducer: appReducer, state: nil)
+
+        let rootViewController = DreamListViewController(store: store)
         let navigationController = UINavigationController(rootViewController: rootViewController)
 
         window.rootViewController = navigationController
