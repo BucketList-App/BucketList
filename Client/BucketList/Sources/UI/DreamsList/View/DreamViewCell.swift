@@ -25,11 +25,8 @@ class DreamCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
-        layer.cornerRadius = Constants.cornerRadius
-        layer.masksToBounds = true
-
+        setupShadowAndCornerRadius()
         makeConstraints()
-
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -38,6 +35,24 @@ class DreamCollectionViewCell: UICollectionViewCell {
 }
 
 private extension DreamCollectionViewCell {
+    func setupShadowAndCornerRadius() {
+        contentView.layer.cornerRadius = Constants.cornerRadius
+        contentView.layer.masksToBounds = true
+
+        layer.cornerRadius = Constants.cornerRadius
+        layer.masksToBounds = false
+
+        layer.shadowRadius = 8.0
+        layer.shadowOpacity = 0.3
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 5)
+
+        layer.shadowPath = UIBezierPath(
+            roundedRect: bounds,
+            cornerRadius: Constants.cornerRadius
+        ).cgPath
+    }
+
     func makeConstraints() {
         contentView.addSubview(imageView)
         contentView.addSubview(titleLabel)
