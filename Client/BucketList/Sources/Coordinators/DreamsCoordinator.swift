@@ -2,19 +2,16 @@ import UIKit
 import Core
 import ReSwift
 import State
+import Factory
 
 final class DreamsCoordinator: Coordinator {
 
     weak var presentingController: UIViewController?
 
-    private let store: Store<AppState>
-
-    init(store: Store<AppState>) {
-        self.store = store
-    }
+    @Injected(\.store) private var store: Store<AppState>
 
     func start() {
-        let dreamsVC = DreamListViewController(store: store)
+        let dreamsVC = DreamListViewController()
         presentingController?.present(dreamsVC, animated: true)
     }
 

@@ -13,9 +13,13 @@
 		2C3CCE372AC709A60030E5EC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE362AC709A60030E5EC /* Core */; };
 		2C3CCE3A2AC710C90030E5EC /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE392AC710C90030E5EC /* Models */; };
 		2C3CCE472AC86B180030E5EC /* DreamsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE462AC86B180030E5EC /* DreamsCoordinator.swift */; };
+		2C3CCE4A2AC8B1770030E5EC /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE492AC8B1770030E5EC /* Factory */; };
+		2C3CCE4C2AC8B2EE0030E5EC /* Registrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE4B2AC8B2EE0030E5EC /* Registrations.swift */; };
+		2C3CCE502AC8B5B50030E5EC /* DreamViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE4F2AC8B5B50030E5EC /* DreamViewCell.swift */; };
+		2C3CCE532AC8B6C00030E5EC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE522AC8B6C00030E5EC /* SnapKit */; };
 		2C4D2E632AB9FB03005F731D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E622AB9FB03005F731D /* AppDelegate.swift */; };
 		2C4D2E652AB9FB03005F731D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E642AB9FB03005F731D /* SceneDelegate.swift */; };
-		2C4D2E672AB9FB03005F731D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E662AB9FB03005F731D /* ViewController.swift */; };
+		2C4D2E672AB9FB03005F731D /* DreamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E662AB9FB03005F731D /* DreamListViewController.swift */; };
 		2C4D2E6C2AB9FB04005F731D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4D2E6B2AB9FB04005F731D /* Assets.xcassets */; };
 		2C4D2E6F2AB9FB04005F731D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4D2E6D2AB9FB04005F731D /* LaunchScreen.storyboard */; };
 		2C4D2E7A2AB9FB04005F731D /* BucketListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E792AB9FB04005F731D /* BucketListTests.swift */; };
@@ -45,10 +49,12 @@
 		2C3CCE352AC7099D0030E5EC /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Core; path = LocalPackages/Core; sourceTree = "<group>"; };
 		2C3CCE382AC710C00030E5EC /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Models; path = LocalPackages/Models; sourceTree = "<group>"; };
 		2C3CCE462AC86B180030E5EC /* DreamsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamsCoordinator.swift; sourceTree = "<group>"; };
+		2C3CCE4B2AC8B2EE0030E5EC /* Registrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registrations.swift; sourceTree = "<group>"; };
+		2C3CCE4F2AC8B5B50030E5EC /* DreamViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamViewCell.swift; sourceTree = "<group>"; };
 		2C4D2E5F2AB9FB03005F731D /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4D2E622AB9FB03005F731D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C4D2E642AB9FB03005F731D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C4D2E662AB9FB03005F731D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C4D2E662AB9FB03005F731D /* DreamListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListViewController.swift; sourceTree = "<group>"; };
 		2C4D2E6B2AB9FB04005F731D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C4D2E6E2AB9FB04005F731D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C4D2E702AB9FB04005F731D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = BucketList/SupportingFiles/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -67,6 +73,8 @@
 				2C3CCE3A2AC710C90030E5EC /* Models in Frameworks */,
 				2C3C490F2AC34E060030E5EC /* RealmSwift in Frameworks */,
 				2C3CCE372AC709A60030E5EC /* Core in Frameworks */,
+				2C3CCE532AC8B6C00030E5EC /* SnapKit in Frameworks */,
+				2C3CCE4A2AC8B1770030E5EC /* Factory in Frameworks */,
 				2C3C490D2AC34E060030E5EC /* Realm in Frameworks */,
 				2C26B3B92ABA0680000FF7D6 /* State in Frameworks */,
 			);
@@ -146,6 +154,7 @@
 		2C3CCE3F2AC731340030E5EC /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				2C3CCE4B2AC8B2EE0030E5EC /* Registrations.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -161,7 +170,8 @@
 		2C3CCE442AC86ADD0030E5EC /* DreamsList */ = {
 			isa = PBXGroup;
 			children = (
-				2C4D2E662AB9FB03005F731D /* ViewController.swift */,
+				2C3CCE4E2AC8B59B0030E5EC /* Controller */,
+				2C3CCE4D2AC8B5930030E5EC /* View */,
 			);
 			path = DreamsList;
 			sourceTree = "<group>";
@@ -172,6 +182,22 @@
 				2C3CCE462AC86B180030E5EC /* DreamsCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		2C3CCE4D2AC8B5930030E5EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C3CCE4F2AC8B5B50030E5EC /* DreamViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C3CCE4E2AC8B59B0030E5EC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C4D2E662AB9FB03005F731D /* DreamListViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		2C4D2E562AB9FB03005F731D = {
@@ -246,6 +272,8 @@
 				2C3C490E2AC34E060030E5EC /* RealmSwift */,
 				2C3CCE362AC709A60030E5EC /* Core */,
 				2C3CCE392AC710C90030E5EC /* Models */,
+				2C3CCE492AC8B1770030E5EC /* Factory */,
+				2C3CCE522AC8B6C00030E5EC /* SnapKit */,
 			);
 			productName = BucketList;
 			productReference = 2C4D2E5F2AB9FB03005F731D /* BucketList.app */;
@@ -321,6 +349,8 @@
 			mainGroup = 2C4D2E562AB9FB03005F731D;
 			packageReferences = (
 				2C3C490B2AC34E060030E5EC /* XCRemoteSwiftPackageReference "realm-swift" */,
+				2C3CCE482AC8B1770030E5EC /* XCRemoteSwiftPackageReference "Factory" */,
+				2C3CCE512AC8B6C00030E5EC /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 2C4D2E602AB9FB03005F731D /* Products */;
 			projectDirPath = "";
@@ -385,8 +415,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C4D2E672AB9FB03005F731D /* ViewController.swift in Sources */,
+				2C4D2E672AB9FB03005F731D /* DreamListViewController.swift in Sources */,
 				2C4D2E632AB9FB03005F731D /* AppDelegate.swift in Sources */,
+				2C3CCE502AC8B5B50030E5EC /* DreamViewCell.swift in Sources */,
+				2C3CCE4C2AC8B2EE0030E5EC /* Registrations.swift in Sources */,
 				2C3CCE472AC86B180030E5EC /* DreamsCoordinator.swift in Sources */,
 				2C4D2E652AB9FB03005F731D /* SceneDelegate.swift in Sources */,
 			);
@@ -732,6 +764,22 @@
 				version = 10.42.0;
 			};
 		};
+		2C3CCE482AC8B1770030E5EC /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = exactVersion;
+				version = 2.3.0;
+			};
+		};
+		2C3CCE512AC8B6C00030E5EC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -756,6 +804,16 @@
 		2C3CCE392AC710C90030E5EC /* Models */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Models;
+		};
+		2C3CCE492AC8B1770030E5EC /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C3CCE482AC8B1770030E5EC /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+		2C3CCE522AC8B6C00030E5EC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C3CCE512AC8B6C00030E5EC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
