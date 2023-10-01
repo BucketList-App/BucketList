@@ -1,6 +1,6 @@
 import UIKit
 
 public protocol Coordinator {
-    var presentingController: UIViewController? { get set }
+    var presentingController: UINavigationController? { get set }
     func start()
 }

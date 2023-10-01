@@ -6,13 +6,18 @@ import Factory
 
 final class DreamsCoordinator: Coordinator {
 
-    weak var presentingController: UIViewController?
+    weak var presentingController: UINavigationController?
 
     @Injected(\.store) private var store: Store<AppState>
 
     func start() {
         let dreamsVC = DreamListViewController()
-        presentingController?.present(dreamsVC, animated: true)
+        let viewController = UIViewController()
+        viewController.view.backgroundColor = .brown
+        dreamsVC.openDream = { [weak self] in
+            self?.presentingController?.present(viewController, animated: true)
+        }
+        presentingController?.pushViewController(dreamsVC, animated: true)
     }
 
 }

@@ -6,6 +6,9 @@ import Factory
 import CoreUI
 
 class DreamListViewController: UIViewController {
+
+    var openDream: (() -> Void)?
+
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = Constants.sectionInset
@@ -51,6 +54,13 @@ extension DreamListViewController: UICollectionViewDataSource {
         ) as? DreamCollectionViewCell else { return UICollectionViewCell() }
 
         return cell
+    }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath
+    ) {
+        openDream?()
     }
 }
 
