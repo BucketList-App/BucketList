@@ -3,6 +3,7 @@ import State
 import Core
 import ReSwift
 import Factory
+import CoreUI
 
 class DreamListViewController: UIViewController {
     let collectionView: UICollectionView = {
@@ -11,7 +12,7 @@ class DreamListViewController: UIViewController {
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .lightGray
+        collectionView.backgroundColor = ColorPalette.DreamsList.background
         return collectionView
     }()
 

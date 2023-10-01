@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+import CoreUI
 
 class DreamCollectionViewCell: UICollectionViewCell {
 
@@ -24,7 +25,7 @@ class DreamCollectionViewCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
+        backgroundColor = ColorPalette.DreamsList.snippet
         setupShadowAndCornerRadius()
         makeConstraints()
     }
