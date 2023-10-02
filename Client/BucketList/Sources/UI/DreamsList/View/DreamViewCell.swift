@@ -3,7 +3,7 @@ import SnapKit
 import CoreUI
 import Models
 
-class DreamCollectionViewCell: UICollectionViewCell {
+class DreamListViewCell: UICollectionViewCell {
 
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -40,7 +40,7 @@ class DreamCollectionViewCell: UICollectionViewCell {
     }
 }
 
-private extension DreamCollectionViewCell {
+private extension DreamListViewCell {
     func setupShadowAndCornerRadius() {
         contentView.layer.cornerRadius = Constants.cornerRadius
         contentView.layer.masksToBounds = true
@@ -76,7 +76,7 @@ private extension DreamCollectionViewCell {
     }
 }
 
-private extension DreamCollectionViewCell {
+private extension DreamListViewCell {
     enum Constants {
         static let inset = 10
         static let cornerRadius = 20.0

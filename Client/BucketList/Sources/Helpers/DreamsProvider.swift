@@ -11,7 +11,8 @@ struct DreamsProvider {
             .init(title: "Attend a Music Festival"),
             .init(title: "Get a Tattoo"),
             .init(title: "Fly in a Helicopter"),
-            .init(title: "Learn spanish")
+            .init(title: "Learn Spanish"),
+            .init(title: "Buy iPhone 15")
         ]
     }
 

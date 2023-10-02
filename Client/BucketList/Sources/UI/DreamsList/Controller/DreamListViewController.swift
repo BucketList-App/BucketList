@@ -59,9 +59,9 @@ extension DreamListViewController: UICollectionViewDataSource {
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "DreamCell",
+            withReuseIdentifier: DreamListViewCell.reuseIdentifier,
             for: indexPath
-        ) as? DreamCollectionViewCell else { return UICollectionViewCell() }
+        ) as? DreamListViewCell else { return UICollectionViewCell() }
         let dream = dreams[indexPath.item]
         cell.configure(with: dream)
         return cell
@@ -101,7 +101,10 @@ extension DreamListViewController: StoreSubscriber {
 private extension DreamListViewController {
     func setupCollectionView() {
         view.addSubview(collectionView)
-        collectionView.register(DreamCollectionViewCell.self, forCellWithReuseIdentifier: "DreamCell")
+        collectionView.register(
+            DreamListViewCell.self,
+            forCellWithReuseIdentifier: DreamListViewCell.reuseIdentifier
+        )
         collectionView.dataSource = self
         collectionView.delegate = self
 
