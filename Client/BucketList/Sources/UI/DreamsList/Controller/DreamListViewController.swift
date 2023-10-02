@@ -4,12 +4,24 @@ import Core
 import ReSwift
 import Factory
 import CoreUI
+import Models
 
 class DreamListViewController: UIViewController {
 
     var openDream: (() -> Void)?
 
-    let collectionView: UICollectionView = {
+    @Injected(\.store) private var store: Store<AppState>
+    @Injected(\.dreamListThunkFactory) private var dreamListThunkFactory: DreamListThunkFactory
+
+    private var dreams: [Dream] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
+
+    private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = Constants.sectionInset
 
@@ -19,19 +31,17 @@ class DreamListViewController: UIViewController {
         return collectionView
     }()
 
-    @Injected(\.store) private var store: Store<AppState>
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.addSubview(collectionView)
-        collectionView.register(DreamCollectionViewCell.self, forCellWithReuseIdentifier: "DreamCell")
-        collectionView.dataSource = self
-        collectionView.delegate = self
-
-        collectionView.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalTo(view)
+        setupCollectionView()
+        store.subscribe(self) { subscription in
+            subscription.select(\.dreamsState)
         }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        store.dispatch(dreamListThunkFactory.makeDreamsListInitialize())
     }
 
 }
@@ -41,7 +51,7 @@ class DreamListViewController: UIViewController {
 extension DreamListViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return dreams.count
     }
 
     func collectionView(
@@ -52,7 +62,8 @@ extension DreamListViewController: UICollectionViewDataSource {
             withReuseIdentifier: "DreamCell",
             for: indexPath
         ) as? DreamCollectionViewCell else { return UICollectionViewCell() }
-
+        let dream = dreams[indexPath.item]
+        cell.configure(with: dream)
         return cell
     }
 
@@ -76,8 +87,27 @@ extension DreamListViewController: UICollectionViewDelegateFlowLayout {
         let cellWidth = (collectionView.frame.width - horizontalSpacing) / 2
 
         let verticalSpacing = 3 * (Constants.sectionInset.top + Constants.sectionInset.bottom)
-        let cellHeight = (collectionView.frame.height - verticalSpacing - 60) / 3
+        let cellHeight = (collectionView.frame.height - verticalSpacing - 120) / 3
         return CGSize(width: cellWidth, height: cellHeight)
+    }
+}
+
+extension DreamListViewController: StoreSubscriber {
+    func newState(state: DreamsState) {
+        dreams = state.dreams
+    }
+}
+
+private extension DreamListViewController {
+    func setupCollectionView() {
+        view.addSubview(collectionView)
+        collectionView.register(DreamCollectionViewCell.self, forCellWithReuseIdentifier: "DreamCell")
+        collectionView.dataSource = self
+        collectionView.delegate = self
+
+        collectionView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
 }
 

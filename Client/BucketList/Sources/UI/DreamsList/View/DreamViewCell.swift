@@ -1,6 +1,7 @@
 import UIKit
 import SnapKit
 import CoreUI
+import Models
 
 class DreamCollectionViewCell: UICollectionViewCell {
 
@@ -32,6 +33,10 @@ class DreamCollectionViewCell: UICollectionViewCell {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func configure(with dream: Dream) {
+        titleLabel.text = dream.title
     }
 }
 
