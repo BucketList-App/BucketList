@@ -14,7 +14,8 @@ let package = Package(
     targets: [
         .target(
             name: "CoreUI",
-            dependencies: []
+            dependencies: [],
+            path: "Sources"
         ),
         .testTarget(
             name: "CoreUITests",

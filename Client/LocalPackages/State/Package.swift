@@ -19,7 +19,8 @@ let package = Package(
             name: "State",
             dependencies: [
                 .byName(name: "ReSwift")
-            ]
+            ],
+            path: "Sources"
         ),
         .testTarget(
             name: "StateTests",
