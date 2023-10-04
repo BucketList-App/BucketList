@@ -7,6 +7,7 @@
 
 import UIKit
 import Core
+import Factory
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,11 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let navigationCon = UINavigationController.init()
-        appCoordinator = DreamsCoordinator()
-        appCoordinator?.presentingController = navigationCon
-        appCoordinator!.start()
-        window!.rootViewController = navigationCon
+
+        appCoordinator = Container.shared.appCoordinator.resolve()
+        appCoordinator?.start()
+
+        let router = Container.shared.appRouter.resolve()
+        window!.rootViewController = router.toPresent()
         window!.makeKeyAndVisible()
         return true
     }

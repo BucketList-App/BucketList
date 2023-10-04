@@ -10,16 +10,22 @@
 		2C26B3B92ABA0680000FF7D6 /* State in Frameworks */ = {isa = PBXBuildFile; productRef = 2C26B3B82ABA0680000FF7D6 /* State */; };
 		2C3C490D2AC34E060030E5EC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3C490C2AC34E060030E5EC /* Realm */; };
 		2C3C490F2AC34E060030E5EC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3C490E2AC34E060030E5EC /* RealmSwift */; };
+		2C3CA5272ACDA482006D01A6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CA5262ACDA482006D01A6 /* AppCoordinator.swift */; };
+		2C3CA5292ACDA507006D01A6 /* LaunchInstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CA5282ACDA507006D01A6 /* LaunchInstructor.swift */; };
+		2C3CA52B2ACDA87A006D01A6 /* DreamInfoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CA52A2ACDA87A006D01A6 /* DreamInfoCoordinator.swift */; };
+		2C3CB2EB2ACDB99D006D01A6 /* CoordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CB2EA2ACDB99D006D01A6 /* CoordinatorsFactory.swift */; };
+		2C3CB2ED2ACDBD42006D01A6 /* ThunkContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CB2EC2ACDBD42006D01A6 /* ThunkContainer.swift */; };
+		2C3CB2EF2ACDBD8B006D01A6 /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CB2EE2ACDBD8B006D01A6 /* ServiceContainer.swift */; };
+		2C3CB2F42ACDC0DB006D01A6 /* DreamListThunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CB2F32ACDC0DB006D01A6 /* DreamListThunk.swift */; };
+		2C3CB2F62ACDC0EC006D01A6 /* DreamListThunkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CB2F52ACDC0EC006D01A6 /* DreamListThunkFactory.swift */; };
 		2C3CCE372AC709A60030E5EC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE362AC709A60030E5EC /* Core */; };
 		2C3CCE3A2AC710C90030E5EC /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE392AC710C90030E5EC /* Models */; };
 		2C3CCE472AC86B180030E5EC /* DreamsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE462AC86B180030E5EC /* DreamsCoordinator.swift */; };
 		2C3CCE4A2AC8B1770030E5EC /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE492AC8B1770030E5EC /* Factory */; };
-		2C3CCE4C2AC8B2EE0030E5EC /* Registrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE4B2AC8B2EE0030E5EC /* Registrations.swift */; };
+		2C3CCE4C2AC8B2EE0030E5EC /* GlobalRegistrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE4B2AC8B2EE0030E5EC /* GlobalRegistrations.swift */; };
 		2C3CCE502AC8B5B50030E5EC /* DreamViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE4F2AC8B5B50030E5EC /* DreamViewCell.swift */; };
 		2C3CCE532AC8B6C00030E5EC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE522AC8B6C00030E5EC /* SnapKit */; };
 		2C3CCE592AC8ECCA0030E5EC /* CoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE582AC8ECCA0030E5EC /* CoreUI */; };
-		2C3CCE5D2ACAB9830030E5EC /* DreamListThunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE5C2ACAB9830030E5EC /* DreamListThunk.swift */; };
-		2C3CCE5F2ACAB98C0030E5EC /* DreamListThunkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE5E2ACAB98C0030E5EC /* DreamListThunkFactory.swift */; };
 		2C3CCE622ACABB990030E5EC /* DreamsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE612ACABB990030E5EC /* DreamsProvider.swift */; };
 		2C4D2E632AB9FB03005F731D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E622AB9FB03005F731D /* AppDelegate.swift */; };
 		2C4D2E672AB9FB03005F731D /* DreamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E662AB9FB03005F731D /* DreamListViewController.swift */; };
@@ -49,14 +55,20 @@
 
 /* Begin PBXFileReference section */
 		2C26B3B72ABA0605000FF7D6 /* State */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = State; path = LocalPackages/State; sourceTree = "<group>"; };
+		2C3CA5262ACDA482006D01A6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2C3CA5282ACDA507006D01A6 /* LaunchInstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInstructor.swift; sourceTree = "<group>"; };
+		2C3CA52A2ACDA87A006D01A6 /* DreamInfoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamInfoCoordinator.swift; sourceTree = "<group>"; };
+		2C3CB2EA2ACDB99D006D01A6 /* CoordinatorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsFactory.swift; sourceTree = "<group>"; };
+		2C3CB2EC2ACDBD42006D01A6 /* ThunkContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThunkContainer.swift; sourceTree = "<group>"; };
+		2C3CB2EE2ACDBD8B006D01A6 /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
+		2C3CB2F32ACDC0DB006D01A6 /* DreamListThunk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListThunk.swift; sourceTree = "<group>"; };
+		2C3CB2F52ACDC0EC006D01A6 /* DreamListThunkFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListThunkFactory.swift; sourceTree = "<group>"; };
 		2C3CCE352AC7099D0030E5EC /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Core; path = LocalPackages/Core; sourceTree = "<group>"; };
 		2C3CCE382AC710C00030E5EC /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Models; path = LocalPackages/Models; sourceTree = "<group>"; };
 		2C3CCE462AC86B180030E5EC /* DreamsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamsCoordinator.swift; sourceTree = "<group>"; };
-		2C3CCE4B2AC8B2EE0030E5EC /* Registrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registrations.swift; sourceTree = "<group>"; };
+		2C3CCE4B2AC8B2EE0030E5EC /* GlobalRegistrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalRegistrations.swift; sourceTree = "<group>"; };
 		2C3CCE4F2AC8B5B50030E5EC /* DreamViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamViewCell.swift; sourceTree = "<group>"; };
 		2C3CCE572AC8ECC10030E5EC /* CoreUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreUI; path = LocalPackages/CoreUI; sourceTree = "<group>"; };
-		2C3CCE5C2ACAB9830030E5EC /* DreamListThunk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListThunk.swift; sourceTree = "<group>"; };
-		2C3CCE5E2ACAB98C0030E5EC /* DreamListThunkFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListThunkFactory.swift; sourceTree = "<group>"; };
 		2C3CCE612ACABB990030E5EC /* DreamsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamsProvider.swift; sourceTree = "<group>"; };
 		2C4D2E5F2AB9FB03005F731D /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4D2E622AB9FB03005F731D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,10 +172,29 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		2C3CB2E92ACDB989006D01A6 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				2C3CB2EA2ACDB99D006D01A6 /* CoordinatorsFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		2C3CB2F22ACDC0B6006D01A6 /* DreamListThunk */ = {
+			isa = PBXGroup;
+			children = (
+				2C3CB2F32ACDC0DB006D01A6 /* DreamListThunk.swift */,
+				2C3CB2F52ACDC0EC006D01A6 /* DreamListThunkFactory.swift */,
+			);
+			path = DreamListThunk;
+			sourceTree = "<group>";
+		};
 		2C3CCE3F2AC731340030E5EC /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				2C3CCE4B2AC8B2EE0030E5EC /* Registrations.swift */,
+				2C3CCE4B2AC8B2EE0030E5EC /* GlobalRegistrations.swift */,
+				2C3CB2EC2ACDBD42006D01A6 /* ThunkContainer.swift */,
+				2C3CB2EE2ACDBD8B006D01A6 /* ServiceContainer.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -188,7 +219,10 @@
 		2C3CCE452AC86AF80030E5EC /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				2C3CB2E92ACDB989006D01A6 /* Factory */,
 				2C3CCE462AC86B180030E5EC /* DreamsCoordinator.swift */,
+				2C3CA5262ACDA482006D01A6 /* AppCoordinator.swift */,
+				2C3CA52A2ACDA87A006D01A6 /* DreamInfoCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -212,24 +246,16 @@
 		2C3CCE5A2ACAB9480030E5EC /* Thunks */ = {
 			isa = PBXGroup;
 			children = (
-				2C3CCE5B2ACAB95D0030E5EC /* DreamsListTunk */,
+				2C3CB2F22ACDC0B6006D01A6 /* DreamListThunk */,
 			);
 			path = Thunks;
-			sourceTree = "<group>";
-		};
-		2C3CCE5B2ACAB95D0030E5EC /* DreamsListTunk */ = {
-			isa = PBXGroup;
-			children = (
-				2C3CCE5C2ACAB9830030E5EC /* DreamListThunk.swift */,
-				2C3CCE5E2ACAB98C0030E5EC /* DreamListThunkFactory.swift */,
-			);
-			path = DreamsListTunk;
 			sourceTree = "<group>";
 		};
 		2C3CCE602ACABB890030E5EC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				2C3CCE612ACABB990030E5EC /* DreamsProvider.swift */,
+				2C3CA5282ACDA507006D01A6 /* LaunchInstructor.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -450,14 +476,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C3CCE5D2ACAB9830030E5EC /* DreamListThunk.swift in Sources */,
 				2C4D2E672AB9FB03005F731D /* DreamListViewController.swift in Sources */,
 				2C4D2E632AB9FB03005F731D /* AppDelegate.swift in Sources */,
+				2C3CB2F62ACDC0EC006D01A6 /* DreamListThunkFactory.swift in Sources */,
+				2C3CB2F42ACDC0DB006D01A6 /* DreamListThunk.swift in Sources */,
+				2C3CB2EB2ACDB99D006D01A6 /* CoordinatorsFactory.swift in Sources */,
+				2C3CB2ED2ACDBD42006D01A6 /* ThunkContainer.swift in Sources */,
+				2C3CA52B2ACDA87A006D01A6 /* DreamInfoCoordinator.swift in Sources */,
 				2C3CCE502AC8B5B50030E5EC /* DreamViewCell.swift in Sources */,
-				2C3CCE4C2AC8B2EE0030E5EC /* Registrations.swift in Sources */,
-				2C3CCE5F2ACAB98C0030E5EC /* DreamListThunkFactory.swift in Sources */,
+				2C3CCE4C2AC8B2EE0030E5EC /* GlobalRegistrations.swift in Sources */,
+				2C3CB2EF2ACDBD8B006D01A6 /* ServiceContainer.swift in Sources */,
+				2C3CA5272ACDA482006D01A6 /* AppCoordinator.swift in Sources */,
 				2C3CCE622ACABB990030E5EC /* DreamsProvider.swift in Sources */,
 				2C3CCE472AC86B180030E5EC /* DreamsCoordinator.swift in Sources */,
+				2C3CA5292ACDA507006D01A6 /* LaunchInstructor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
