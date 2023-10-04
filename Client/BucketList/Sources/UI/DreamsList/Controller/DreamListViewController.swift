@@ -11,7 +11,18 @@ class DreamListViewController: UIViewController {
     var openDream: (() -> Void)?
 
     @Injected(\.store) private var store: Store<AppState>
-    @Injected(\.dreamListThunkFactory) private var dreamListThunkFactory: DreamListThunkFactory
+    private let dreamListThunkFactory: DreamListThunkFactory
+
+    init(dreamListThunkFactory: DreamListThunkFactory) {
+        self.dreamListThunkFactory = dreamListThunkFactory
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    private let collectionView = makeCollectionView()
 
     private var dreams: [Dream] = [] {
         didSet {
@@ -20,16 +31,6 @@ class DreamListViewController: UIViewController {
             }
         }
     }
-
-    private let collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = Constants.sectionInset
-
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = ColorPalette.DreamsList.background
-        return collectionView
-    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,6 +112,16 @@ private extension DreamListViewController {
         collectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+    }
+
+    static func makeCollectionView() -> UICollectionView {
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = Constants.sectionInset
+
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = ColorPalette.DreamsList.background
+        return collectionView
     }
 }
 

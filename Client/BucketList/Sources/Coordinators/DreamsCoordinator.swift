@@ -4,20 +4,31 @@ import ReSwift
 import State
 import Factory
 
-final class DreamsCoordinator: Coordinator {
-
-    weak var presentingController: UINavigationController?
+final class DreamsListCoordinator: BaseCoordinator {
 
     @Injected(\.store) private var store: Store<AppState>
 
-    func start() {
-        let dreamsVC = DreamListViewController()
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .brown
-        dreamsVC.openDream = { [weak self] in
-            self?.presentingController?.present(viewController, animated: true)
+    private let router: Router
+    private let coordinatorsFactory: CoordinatorsFactory
+    private let dreamListThunkFactory: DreamListThunkFactory
+
+    init(
+        router: Router,
+        coordinatorsFactory: CoordinatorsFactory,
+        dreamListThunkFactory: DreamListThunkFactory
+    ) {
+        self.router = router
+        self.coordinatorsFactory = coordinatorsFactory
+        self.dreamListThunkFactory = dreamListThunkFactory
+    }
+
+    override func start() {
+        let dreamsVC = DreamListViewController(dreamListThunkFactory: dreamListThunkFactory)
+        let dreamInfoCoordinator = coordinatorsFactory.makeDreamInfoCoordinator()
+        dreamsVC.openDream = {
+            dreamInfoCoordinator.start()
         }
-        presentingController?.pushViewController(dreamsVC, animated: true)
+        router.push(dreamsVC, animated: true)
     }
 
 }
