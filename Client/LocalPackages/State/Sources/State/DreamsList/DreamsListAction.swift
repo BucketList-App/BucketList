@@ -1,6 +1,6 @@
 import ReSwift
 import Models
 
-public enum DreamsAction: Action {
+public enum DreamsListAction: Action {
     case update(dreams: [Dream])
 }

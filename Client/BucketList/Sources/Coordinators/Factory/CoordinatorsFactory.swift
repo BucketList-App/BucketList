@@ -1,4 +1,5 @@
 import Core
+import Models
 
 final class CoordinatorsFactory {
 
@@ -8,7 +9,7 @@ final class CoordinatorsFactory {
         self.router = router
     }
 
-    func makeDreamsListCoordinator() -> Coordinator {
+    func makeDreamsListCoordinator() -> Coordinator & DreamsListCoordinatorOutput {
         DreamsListCoordinator(
             router: router,
             coordinatorsFactory: self,
@@ -16,8 +17,8 @@ final class CoordinatorsFactory {
         )
     }
 
-    func makeDreamInfoCoordinator() -> Coordinator {
-        DreamInfoCoordinator(router: router)
+    func makeDreamInfoCoordinator(dream: Dream) -> Coordinator & DreamInfoCoordinatorOutput {
+        DreamInfoCoordinator(router: router, dream: dream)
     }
 
 }

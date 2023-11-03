@@ -34,5 +34,5 @@ extension Container {
     var coordinatorsFactory: Factory<CoordinatorsFactory> {
         self { CoordinatorsFactory(router: self.appRouter.resolve()) }
             .singleton
-    }    
+    }
 }

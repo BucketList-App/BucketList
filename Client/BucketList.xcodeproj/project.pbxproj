@@ -20,7 +20,7 @@
 		2C3CB2F62ACDC0EC006D01A6 /* DreamListThunkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CB2F52ACDC0EC006D01A6 /* DreamListThunkFactory.swift */; };
 		2C3CCE372AC709A60030E5EC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE362AC709A60030E5EC /* Core */; };
 		2C3CCE3A2AC710C90030E5EC /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE392AC710C90030E5EC /* Models */; };
-		2C3CCE472AC86B180030E5EC /* DreamsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE462AC86B180030E5EC /* DreamsCoordinator.swift */; };
+		2C3CCE472AC86B180030E5EC /* DreamsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE462AC86B180030E5EC /* DreamsListCoordinator.swift */; };
 		2C3CCE4A2AC8B1770030E5EC /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE492AC8B1770030E5EC /* Factory */; };
 		2C3CCE4C2AC8B2EE0030E5EC /* GlobalRegistrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE4B2AC8B2EE0030E5EC /* GlobalRegistrations.swift */; };
 		2C3CCE502AC8B5B50030E5EC /* DreamViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE4F2AC8B5B50030E5EC /* DreamViewCell.swift */; };
@@ -34,6 +34,11 @@
 		2C4D2E7A2AB9FB04005F731D /* BucketListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E792AB9FB04005F731D /* BucketListTests.swift */; };
 		2C4D2E842AB9FB04005F731D /* BucketListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E832AB9FB04005F731D /* BucketListUITests.swift */; };
 		2C4D2E862AB9FB04005F731D /* BucketListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2E852AB9FB04005F731D /* BucketListUITestsLaunchTests.swift */; };
+		2C61E9FE2ACDF01100C252E2 /* DreamInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C61E9FD2ACDF01100C252E2 /* DreamInfoViewController.swift */; };
+		2CFB2B382ACDF6B2001F687B /* DreamInfoComponentsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFB2B372ACDF6B2001F687B /* DreamInfoComponentsFactory.swift */; };
+		2CFB38F82ACE0794001F687B /* DreamsListCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFB38F72ACE0794001F687B /* DreamsListCoordinatorOutput.swift */; };
+		2CFB38FB2ACE08E0001F687B /* DreamInfoCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFB38FA2ACE08E0001F687B /* DreamInfoCoordinatorOutput.swift */; };
+		2CFB38FD2ACE1003001F687B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFB38FC2ACE1003001F687B /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +70,7 @@
 		2C3CB2F52ACDC0EC006D01A6 /* DreamListThunkFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListThunkFactory.swift; sourceTree = "<group>"; };
 		2C3CCE352AC7099D0030E5EC /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Core; path = LocalPackages/Core; sourceTree = "<group>"; };
 		2C3CCE382AC710C00030E5EC /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Models; path = LocalPackages/Models; sourceTree = "<group>"; };
-		2C3CCE462AC86B180030E5EC /* DreamsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamsCoordinator.swift; sourceTree = "<group>"; };
+		2C3CCE462AC86B180030E5EC /* DreamsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamsListCoordinator.swift; sourceTree = "<group>"; };
 		2C3CCE4B2AC8B2EE0030E5EC /* GlobalRegistrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalRegistrations.swift; sourceTree = "<group>"; };
 		2C3CCE4F2AC8B5B50030E5EC /* DreamViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamViewCell.swift; sourceTree = "<group>"; };
 		2C3CCE572AC8ECC10030E5EC /* CoreUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreUI; path = LocalPackages/CoreUI; sourceTree = "<group>"; };
@@ -81,6 +86,11 @@
 		2C4D2E7F2AB9FB04005F731D /* BucketListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BucketListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4D2E832AB9FB04005F731D /* BucketListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListUITests.swift; sourceTree = "<group>"; };
 		2C4D2E852AB9FB04005F731D /* BucketListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2C61E9FD2ACDF01100C252E2 /* DreamInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamInfoViewController.swift; sourceTree = "<group>"; };
+		2CFB2B372ACDF6B2001F687B /* DreamInfoComponentsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamInfoComponentsFactory.swift; sourceTree = "<group>"; };
+		2CFB38F72ACE0794001F687B /* DreamsListCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamsListCoordinatorOutput.swift; sourceTree = "<group>"; };
+		2CFB38FA2ACE08E0001F687B /* DreamInfoCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamInfoCoordinatorOutput.swift; sourceTree = "<group>"; };
+		2CFB38FC2ACE1003001F687B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +212,8 @@
 		2C3CCE432AC86AD10030E5EC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2CFB38F52ACDFA6F001F687B /* Common */,
+				2C61E9FA2ACDED2A00C252E2 /* DreamInfo */,
 				2C3CCE442AC86ADD0030E5EC /* DreamsList */,
 			);
 			path = UI;
@@ -219,10 +231,10 @@
 		2C3CCE452AC86AF80030E5EC /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				2CFB38F92ACE08C7001F687B /* DreamInfoCoordinator */,
+				2CFB38F62ACE076F001F687B /* DreamsListCoordinator */,
 				2C3CB2E92ACDB989006D01A6 /* Factory */,
-				2C3CCE462AC86B180030E5EC /* DreamsCoordinator.swift */,
 				2C3CA5262ACDA482006D01A6 /* AppCoordinator.swift */,
-				2C3CA52A2ACDA87A006D01A6 /* DreamInfoCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -307,6 +319,65 @@
 				2C4D2E852AB9FB04005F731D /* BucketListUITestsLaunchTests.swift */,
 			);
 			path = BucketListUITests;
+			sourceTree = "<group>";
+		};
+		2C61E9FA2ACDED2A00C252E2 /* DreamInfo */ = {
+			isa = PBXGroup;
+			children = (
+				2C61E9FC2ACDED3900C252E2 /* Views */,
+				2C61E9FB2ACDED3200C252E2 /* Controller */,
+			);
+			path = DreamInfo;
+			sourceTree = "<group>";
+		};
+		2C61E9FB2ACDED3200C252E2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C61E9FD2ACDF01100C252E2 /* DreamInfoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2C61E9FC2ACDED3900C252E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2CFB2B362ACDF69D001F687B /* Factory */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2CFB2B362ACDF69D001F687B /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				2CFB2B372ACDF6B2001F687B /* DreamInfoComponentsFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		2CFB38F52ACDFA6F001F687B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2CFB38FC2ACE1003001F687B /* ImagePicker.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2CFB38F62ACE076F001F687B /* DreamsListCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2C3CCE462AC86B180030E5EC /* DreamsListCoordinator.swift */,
+				2CFB38F72ACE0794001F687B /* DreamsListCoordinatorOutput.swift */,
+			);
+			path = DreamsListCoordinator;
+			sourceTree = "<group>";
+		};
+		2CFB38F92ACE08C7001F687B /* DreamInfoCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2C3CA52A2ACDA87A006D01A6 /* DreamInfoCoordinator.swift */,
+				2CFB38FA2ACE08E0001F687B /* DreamInfoCoordinatorOutput.swift */,
+			);
+			path = DreamInfoCoordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,19 +547,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CFB38FB2ACE08E0001F687B /* DreamInfoCoordinatorOutput.swift in Sources */,
 				2C4D2E672AB9FB03005F731D /* DreamListViewController.swift in Sources */,
 				2C4D2E632AB9FB03005F731D /* AppDelegate.swift in Sources */,
+				2C61E9FE2ACDF01100C252E2 /* DreamInfoViewController.swift in Sources */,
 				2C3CB2F62ACDC0EC006D01A6 /* DreamListThunkFactory.swift in Sources */,
 				2C3CB2F42ACDC0DB006D01A6 /* DreamListThunk.swift in Sources */,
 				2C3CB2EB2ACDB99D006D01A6 /* CoordinatorsFactory.swift in Sources */,
+				2CFB38FD2ACE1003001F687B /* ImagePicker.swift in Sources */,
 				2C3CB2ED2ACDBD42006D01A6 /* ThunkContainer.swift in Sources */,
 				2C3CA52B2ACDA87A006D01A6 /* DreamInfoCoordinator.swift in Sources */,
 				2C3CCE502AC8B5B50030E5EC /* DreamViewCell.swift in Sources */,
 				2C3CCE4C2AC8B2EE0030E5EC /* GlobalRegistrations.swift in Sources */,
 				2C3CB2EF2ACDBD8B006D01A6 /* ServiceContainer.swift in Sources */,
+				2CFB38F82ACE0794001F687B /* DreamsListCoordinatorOutput.swift in Sources */,
 				2C3CA5272ACDA482006D01A6 /* AppCoordinator.swift in Sources */,
+				2CFB2B382ACDF6B2001F687B /* DreamInfoComponentsFactory.swift in Sources */,
 				2C3CCE622ACABB990030E5EC /* DreamsProvider.swift in Sources */,
-				2C3CCE472AC86B180030E5EC /* DreamsCoordinator.swift in Sources */,
+				2C3CCE472AC86B180030E5EC /* DreamsListCoordinator.swift in Sources */,
 				2C3CA5292ACDA507006D01A6 /* LaunchInstructor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

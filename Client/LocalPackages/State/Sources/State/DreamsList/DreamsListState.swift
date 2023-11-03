@@ -1,7 +1,7 @@
 import ReSwift
 import Models
 
-public struct DreamsState: Equatable {
+public struct DreamsListState: Equatable {
 
     public var dreams: [Dream]
 

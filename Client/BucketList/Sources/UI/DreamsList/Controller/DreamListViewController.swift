@@ -8,7 +8,7 @@ import Models
 
 class DreamListViewController: UIViewController {
 
-    var openDream: (() -> Void)?
+    var openDream: ((Dream) -> Void)?
 
     @Injected(\.store) private var store: Store<AppState>
     private let dreamListThunkFactory: DreamListThunkFactory
@@ -36,7 +36,7 @@ class DreamListViewController: UIViewController {
         super.viewDidLoad()
         setupCollectionView()
         store.subscribe(self) { subscription in
-            subscription.select(\.dreamsState)
+            subscription.select(\.dreamsListState)
         }
     }
 
@@ -72,7 +72,8 @@ extension DreamListViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ) {
-        openDream?()
+        let dream = dreams[indexPath.item]
+        openDream?(dream)
     }
 }
 
@@ -94,7 +95,7 @@ extension DreamListViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension DreamListViewController: StoreSubscriber {
-    func newState(state: DreamsState) {
+    func newState(state: DreamsListState) {
         dreams = state.dreams
     }
 }

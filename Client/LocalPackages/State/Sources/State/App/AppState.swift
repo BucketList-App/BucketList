@@ -2,13 +2,19 @@ import ReSwift
 
 public class AppState: Equatable {
 
-    public var dreamsState: DreamsState
+    public var dreamsListState: DreamsListState
+    public var dreamInfoState: DreamInfoState
 
-    public init (dreamsState: DreamsState) {
-        self.dreamsState = dreamsState
+    public init (
+        dreamsListState: DreamsListState,
+        dreamInfoState: DreamInfoState
+    ) {
+        self.dreamsListState = dreamsListState
+        self.dreamInfoState = dreamInfoState
     }
 
     public static func == (lhs: AppState, rhs: AppState) -> Bool {
-        lhs.dreamsState == rhs.dreamsState
+        lhs.dreamsListState == rhs.dreamsListState &&
+        lhs.dreamInfoState == rhs.dreamInfoState
     }
 }

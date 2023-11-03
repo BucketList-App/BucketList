@@ -28,7 +28,11 @@ final class AppCoordinator: BaseCoordinator {
 
 private extension AppCoordinator {
     func runMainFlow() {
-        let dreamsCoordinator = coordinatorsFactory.makeDreamsListCoordinator()
+        var dreamsCoordinator = coordinatorsFactory.makeDreamsListCoordinator()
         dreamsCoordinator.start()
+        addDependency(dreamsCoordinator)
+        dreamsCoordinator.finishFlow = { [weak self] in
+            self?.removeDependency(dreamsCoordinator)
+        }
     }
 }
