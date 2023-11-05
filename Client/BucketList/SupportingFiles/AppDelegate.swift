@@ -7,13 +7,13 @@
 
 import UIKit
 import Core
-import Factory
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var appCoordinator: Coordinator?
+
+    private let assembler = AppAssembler()
 
     func application(
         _ application: UIApplication,
@@ -21,12 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        appCoordinator = Container.shared.appCoordinator.resolve()
-        appCoordinator?.start()
+        let appCoordinator = assembler.makeAppCoordinator()
+        let router = assembler.makeAppRouter()
 
-        let router = Container.shared.appRouter.resolve()
+        appCoordinator.start()
+
         window!.rootViewController = router.toPresent()
         window!.makeKeyAndVisible()
+
         return true
     }
 

@@ -11,7 +11,7 @@ enum DreamInfoComponentsFactory {
         textView.textAlignment = .natural
         textView.isScrollEnabled = false
 
-        // TODO: Dynamic height
+        // TODO: Dynamic height (?)
         let titleHeight = textView.height(forNumberOfLines: 2)
         textView.layer.cornerRadius = titleHeight / 4
 

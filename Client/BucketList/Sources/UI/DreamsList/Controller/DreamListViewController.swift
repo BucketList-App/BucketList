@@ -2,7 +2,6 @@ import UIKit
 import State
 import Core
 import ReSwift
-import Factory
 import CoreUI
 import Models
 
@@ -10,10 +9,14 @@ class DreamListViewController: UIViewController {
 
     var openDream: ((Dream) -> Void)?
 
-    @Injected(\.store) private var store: Store<AppState>
+    private let store: Store<AppState>
     private let dreamListThunkFactory: DreamListThunkFactory
 
-    init(dreamListThunkFactory: DreamListThunkFactory) {
+    init(
+        store: Store<AppState>,
+        dreamListThunkFactory: DreamListThunkFactory
+    ) {
+        self.store = store
         self.dreamListThunkFactory = dreamListThunkFactory
         super.init(nibName: nil, bundle: nil)
     }
