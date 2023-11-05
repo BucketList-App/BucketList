@@ -1,8 +1,8 @@
-import UIKit
-import State
-import ReSwift
-import Models
 import CoreUI
+import Models
+import ReSwift
+import State
+import UIKit
 
 final class DreamInfoViewController: UIViewController {
 
@@ -34,8 +34,9 @@ final class DreamInfoViewController: UIViewController {
         }
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        preconditionFailure("init(coder:) has not been implemented")
     }
 
     override func viewDidLoad() {

@@ -1,8 +1,8 @@
-import UIKit
 import Core
+import Models
 import ReSwift
 import State
-import Models
+import UIKit
 
 final class DreamsListCoordinator: BaseCoordinator, DreamsListCoordinatorOutput {
 
@@ -27,7 +27,7 @@ final class DreamsListCoordinator: BaseCoordinator, DreamsListCoordinatorOutput 
 
     override func start() {
         let dreamsVC = DreamListViewController(
-            store: store, 
+            store: store,
             dreamListThunkFactory: dreamListThunkFactory
         )
         dreamsVC.openDream = { [weak self] dream in

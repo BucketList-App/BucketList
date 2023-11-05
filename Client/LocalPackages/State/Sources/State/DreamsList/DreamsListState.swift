@@ -1,5 +1,5 @@
-import ReSwift
 import Models
+import ReSwift
 
 public struct DreamsListState: Equatable {
 

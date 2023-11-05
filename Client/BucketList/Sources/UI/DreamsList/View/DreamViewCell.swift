@@ -1,7 +1,7 @@
-import UIKit
-import SnapKit
 import CoreUI
 import Models
+import SnapKit
+import UIKit
 
 class DreamListViewCell: UICollectionViewCell {
 
@@ -31,8 +31,9 @@ class DreamListViewCell: UICollectionViewCell {
         makeConstraints()
     }
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        preconditionFailure("init(coder:) has not been implemented")
     }
 
     func configure(with dream: Dream) {

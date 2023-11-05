@@ -1,7 +1,7 @@
-import UIKit
 import Core
 import ReSwift
 import State
+import UIKit
 
 final class AppCoordinator: BaseCoordinator {
 
@@ -15,6 +15,7 @@ final class AppCoordinator: BaseCoordinator {
     ) {
         self.router = router
         self.coordinatorsFactory = coordinatorsFactory
+
     }
 
     override func start() {
