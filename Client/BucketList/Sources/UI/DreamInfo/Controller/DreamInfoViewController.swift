@@ -1,5 +1,4 @@
 import UIKit
-import Factory
 import State
 import ReSwift
 import Models
@@ -9,15 +8,21 @@ final class DreamInfoViewController: UIViewController {
 
     var finishFlow: (() -> Void)?
 
-    @Injected(\.store) private var store: Store<AppState>
     private var dream: Dream
+
+    private let store: Store<AppState>
     private let imagePicker: ImagePicker
 
     private let titleTextView = DreamInfoComponentsFactory.makeTitleTextView()
     private let imageView = DreamInfoComponentsFactory.makeImageView()
     private let descriptionTextView = DreamInfoComponentsFactory.makeDescriptionTextView()
 
-    init(dream: Dream, imagePicker: ImagePicker) {
+    init(
+        store: Store<AppState>,
+        dream: Dream,
+        imagePicker: ImagePicker
+    ) {
+        self.store = store
         self.dream = dream
         self.imagePicker = imagePicker
 

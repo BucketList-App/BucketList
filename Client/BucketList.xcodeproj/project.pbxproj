@@ -14,15 +14,11 @@
 		2C3CA5292ACDA507006D01A6 /* LaunchInstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CA5282ACDA507006D01A6 /* LaunchInstructor.swift */; };
 		2C3CA52B2ACDA87A006D01A6 /* DreamInfoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CA52A2ACDA87A006D01A6 /* DreamInfoCoordinator.swift */; };
 		2C3CB2EB2ACDB99D006D01A6 /* CoordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CB2EA2ACDB99D006D01A6 /* CoordinatorsFactory.swift */; };
-		2C3CB2ED2ACDBD42006D01A6 /* ThunkContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CB2EC2ACDBD42006D01A6 /* ThunkContainer.swift */; };
-		2C3CB2EF2ACDBD8B006D01A6 /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CB2EE2ACDBD8B006D01A6 /* ServiceContainer.swift */; };
 		2C3CB2F42ACDC0DB006D01A6 /* DreamListThunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CB2F32ACDC0DB006D01A6 /* DreamListThunk.swift */; };
 		2C3CB2F62ACDC0EC006D01A6 /* DreamListThunkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CB2F52ACDC0EC006D01A6 /* DreamListThunkFactory.swift */; };
 		2C3CCE372AC709A60030E5EC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE362AC709A60030E5EC /* Core */; };
 		2C3CCE3A2AC710C90030E5EC /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE392AC710C90030E5EC /* Models */; };
 		2C3CCE472AC86B180030E5EC /* DreamsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE462AC86B180030E5EC /* DreamsListCoordinator.swift */; };
-		2C3CCE4A2AC8B1770030E5EC /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE492AC8B1770030E5EC /* Factory */; };
-		2C3CCE4C2AC8B2EE0030E5EC /* GlobalRegistrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE4B2AC8B2EE0030E5EC /* GlobalRegistrations.swift */; };
 		2C3CCE502AC8B5B50030E5EC /* DreamViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CCE4F2AC8B5B50030E5EC /* DreamViewCell.swift */; };
 		2C3CCE532AC8B6C00030E5EC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE522AC8B6C00030E5EC /* SnapKit */; };
 		2C3CCE592AC8ECCA0030E5EC /* CoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3CCE582AC8ECCA0030E5EC /* CoreUI */; };
@@ -39,6 +35,7 @@
 		2CFB38F82ACE0794001F687B /* DreamsListCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFB38F72ACE0794001F687B /* DreamsListCoordinatorOutput.swift */; };
 		2CFB38FB2ACE08E0001F687B /* DreamInfoCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFB38FA2ACE08E0001F687B /* DreamInfoCoordinatorOutput.swift */; };
 		2CFB38FD2ACE1003001F687B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFB38FC2ACE1003001F687B /* ImagePicker.swift */; };
+		2CFEB2A32AF7F63A00337DD9 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEB2A22AF7F63A00337DD9 /* AppAssembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,14 +61,11 @@
 		2C3CA5282ACDA507006D01A6 /* LaunchInstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInstructor.swift; sourceTree = "<group>"; };
 		2C3CA52A2ACDA87A006D01A6 /* DreamInfoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamInfoCoordinator.swift; sourceTree = "<group>"; };
 		2C3CB2EA2ACDB99D006D01A6 /* CoordinatorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsFactory.swift; sourceTree = "<group>"; };
-		2C3CB2EC2ACDBD42006D01A6 /* ThunkContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThunkContainer.swift; sourceTree = "<group>"; };
-		2C3CB2EE2ACDBD8B006D01A6 /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
 		2C3CB2F32ACDC0DB006D01A6 /* DreamListThunk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListThunk.swift; sourceTree = "<group>"; };
 		2C3CB2F52ACDC0EC006D01A6 /* DreamListThunkFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListThunkFactory.swift; sourceTree = "<group>"; };
 		2C3CCE352AC7099D0030E5EC /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Core; path = LocalPackages/Core; sourceTree = "<group>"; };
 		2C3CCE382AC710C00030E5EC /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Models; path = LocalPackages/Models; sourceTree = "<group>"; };
 		2C3CCE462AC86B180030E5EC /* DreamsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamsListCoordinator.swift; sourceTree = "<group>"; };
-		2C3CCE4B2AC8B2EE0030E5EC /* GlobalRegistrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalRegistrations.swift; sourceTree = "<group>"; };
 		2C3CCE4F2AC8B5B50030E5EC /* DreamViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamViewCell.swift; sourceTree = "<group>"; };
 		2C3CCE572AC8ECC10030E5EC /* CoreUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreUI; path = LocalPackages/CoreUI; sourceTree = "<group>"; };
 		2C3CCE612ACABB990030E5EC /* DreamsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamsProvider.swift; sourceTree = "<group>"; };
@@ -91,6 +85,7 @@
 		2CFB38F72ACE0794001F687B /* DreamsListCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamsListCoordinatorOutput.swift; sourceTree = "<group>"; };
 		2CFB38FA2ACE08E0001F687B /* DreamInfoCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamInfoCoordinatorOutput.swift; sourceTree = "<group>"; };
 		2CFB38FC2ACE1003001F687B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		2CFEB2A22AF7F63A00337DD9 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +97,6 @@
 				2C3C490F2AC34E060030E5EC /* RealmSwift in Frameworks */,
 				2C3CCE372AC709A60030E5EC /* Core in Frameworks */,
 				2C3CCE532AC8B6C00030E5EC /* SnapKit in Frameworks */,
-				2C3CCE4A2AC8B1770030E5EC /* Factory in Frameworks */,
 				2C3CCE592AC8ECCA0030E5EC /* CoreUI in Frameworks */,
 				2C3C490D2AC34E060030E5EC /* Realm in Frameworks */,
 				2C26B3B92ABA0680000FF7D6 /* State in Frameworks */,
@@ -151,7 +145,6 @@
 				2C3CCE5A2ACAB9480030E5EC /* Thunks */,
 				2C3CCE452AC86AF80030E5EC /* Coordinators */,
 				2C3CCE432AC86AD10030E5EC /* UI */,
-				2C3CCE3F2AC731340030E5EC /* DI */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -197,16 +190,6 @@
 				2C3CB2F52ACDC0EC006D01A6 /* DreamListThunkFactory.swift */,
 			);
 			path = DreamListThunk;
-			sourceTree = "<group>";
-		};
-		2C3CCE3F2AC731340030E5EC /* DI */ = {
-			isa = PBXGroup;
-			children = (
-				2C3CCE4B2AC8B2EE0030E5EC /* GlobalRegistrations.swift */,
-				2C3CB2EC2ACDBD42006D01A6 /* ThunkContainer.swift */,
-				2C3CB2EE2ACDBD8B006D01A6 /* ServiceContainer.swift */,
-			);
-			path = DI;
 			sourceTree = "<group>";
 		};
 		2C3CCE432AC86AD10030E5EC /* UI */ = {
@@ -268,6 +251,7 @@
 			children = (
 				2C3CCE612ACABB990030E5EC /* DreamsProvider.swift */,
 				2C3CA5282ACDA507006D01A6 /* LaunchInstructor.swift */,
+				2CFEB2A22AF7F63A00337DD9 /* AppAssembler.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -403,7 +387,6 @@
 				2C3C490E2AC34E060030E5EC /* RealmSwift */,
 				2C3CCE362AC709A60030E5EC /* Core */,
 				2C3CCE392AC710C90030E5EC /* Models */,
-				2C3CCE492AC8B1770030E5EC /* Factory */,
 				2C3CCE522AC8B6C00030E5EC /* SnapKit */,
 				2C3CCE582AC8ECCA0030E5EC /* CoreUI */,
 			);
@@ -481,7 +464,6 @@
 			mainGroup = 2C4D2E562AB9FB03005F731D;
 			packageReferences = (
 				2C3C490B2AC34E060030E5EC /* XCRemoteSwiftPackageReference "realm-swift" */,
-				2C3CCE482AC8B1770030E5EC /* XCRemoteSwiftPackageReference "Factory" */,
 				2C3CCE512AC8B6C00030E5EC /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 2C4D2E602AB9FB03005F731D /* Products */;
@@ -555,14 +537,12 @@
 				2C3CB2F42ACDC0DB006D01A6 /* DreamListThunk.swift in Sources */,
 				2C3CB2EB2ACDB99D006D01A6 /* CoordinatorsFactory.swift in Sources */,
 				2CFB38FD2ACE1003001F687B /* ImagePicker.swift in Sources */,
-				2C3CB2ED2ACDBD42006D01A6 /* ThunkContainer.swift in Sources */,
 				2C3CA52B2ACDA87A006D01A6 /* DreamInfoCoordinator.swift in Sources */,
 				2C3CCE502AC8B5B50030E5EC /* DreamViewCell.swift in Sources */,
-				2C3CCE4C2AC8B2EE0030E5EC /* GlobalRegistrations.swift in Sources */,
-				2C3CB2EF2ACDBD8B006D01A6 /* ServiceContainer.swift in Sources */,
 				2CFB38F82ACE0794001F687B /* DreamsListCoordinatorOutput.swift in Sources */,
 				2C3CA5272ACDA482006D01A6 /* AppCoordinator.swift in Sources */,
 				2CFB2B382ACDF6B2001F687B /* DreamInfoComponentsFactory.swift in Sources */,
+				2CFEB2A32AF7F63A00337DD9 /* AppAssembler.swift in Sources */,
 				2C3CCE622ACABB990030E5EC /* DreamsProvider.swift in Sources */,
 				2C3CCE472AC86B180030E5EC /* DreamsListCoordinator.swift in Sources */,
 				2C3CA5292ACDA507006D01A6 /* LaunchInstructor.swift in Sources */,
@@ -909,14 +889,6 @@
 				version = 10.42.0;
 			};
 		};
-		2C3CCE482AC8B1770030E5EC /* XCRemoteSwiftPackageReference "Factory" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hmlongco/Factory";
-			requirement = {
-				kind = exactVersion;
-				version = 2.3.0;
-			};
-		};
 		2C3CCE512AC8B6C00030E5EC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -949,11 +921,6 @@
 		2C3CCE392AC710C90030E5EC /* Models */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Models;
-		};
-		2C3CCE492AC8B1770030E5EC /* Factory */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2C3CCE482AC8B1770030E5EC /* XCRemoteSwiftPackageReference "Factory" */;
-			productName = Factory;
 		};
 		2C3CCE522AC8B6C00030E5EC /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

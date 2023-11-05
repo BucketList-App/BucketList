@@ -1,24 +1,39 @@
 import Core
 import Models
+import ReSwift
+import State
 
 final class CoordinatorsFactory {
 
+    private let strore: Store<AppState>
     private let router: Router
+    private let dreamListThunkFactory: DreamListThunkFactory
 
-    init(router: Router) {
+    init(
+        strore: Store<AppState>,
+        router: Router,
+        dreamListThunkFactory: DreamListThunkFactory
+    ) {
+        self.strore = strore
         self.router = router
+        self.dreamListThunkFactory = dreamListThunkFactory
     }
 
     func makeDreamsListCoordinator() -> Coordinator & DreamsListCoordinatorOutput {
         DreamsListCoordinator(
+            store: strore,
             router: router,
             coordinatorsFactory: self,
-            dreamListThunkFactory: ThunkContainer.shared.dreamListThunkFactory.resolve()
+            dreamListThunkFactory: dreamListThunkFactory
         )
     }
 
     func makeDreamInfoCoordinator(dream: Dream) -> Coordinator & DreamInfoCoordinatorOutput {
-        DreamInfoCoordinator(router: router, dream: dream)
+        DreamInfoCoordinator(
+            store: strore,
+            router: router,
+            dream: dream
+        )
     }
 
 }
