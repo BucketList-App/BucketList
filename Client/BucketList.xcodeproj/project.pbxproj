@@ -371,7 +371,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C4D2E892AB9FB04005F731D /* Build configuration list for PBXNativeTarget "BucketList" */;
 			buildPhases = (
-				2C26B3BA2ABA06F8000FF7D6 /* Linter */,
 				2C4D2E5B2AB9FB03005F731D /* Sources */,
 				2C4D2E5C2AB9FB03005F731D /* Frameworks */,
 				2C4D2E5D2AB9FB03005F731D /* Resources */,
@@ -502,27 +501,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2C26B3BA2ABA06F8000FF7D6 /* Linter */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Linter;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C4D2E5B2AB9FB03005F731D /* Sources */ = {
