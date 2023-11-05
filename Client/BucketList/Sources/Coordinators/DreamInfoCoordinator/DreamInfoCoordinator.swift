@@ -1,8 +1,8 @@
-import UIKit
 import Core
+import Models
 import ReSwift
 import State
-import Models
+import UIKit
 
 final class DreamInfoCoordinator: BaseCoordinator, DreamInfoCoordinatorOutput {
 

@@ -1,5 +1,5 @@
-import State
 import ReSwift
+import State
 
 enum DreamListThunk {
 

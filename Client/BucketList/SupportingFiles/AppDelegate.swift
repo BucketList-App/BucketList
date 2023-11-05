@@ -5,8 +5,8 @@
 //  Created by Gleb Fandeev on 18.09.2023.
 //
 
-import UIKit
 import Core
+import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private let assembler = AppAssembler()
 
+    // swiftlint:disable discouraged_optional_collection
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
@@ -26,8 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         appCoordinator.start()
 
-        window!.rootViewController = router.toPresent()
-        window!.makeKeyAndVisible()
+        window?.rootViewController = router.toPresent()
+        window?.makeKeyAndVisible()
 
         return true
     }

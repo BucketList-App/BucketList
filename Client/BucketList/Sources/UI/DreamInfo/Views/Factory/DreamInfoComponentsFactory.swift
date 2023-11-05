@@ -1,10 +1,10 @@
-import UIKit
 import CoreUI
+import UIKit
 
 enum DreamInfoComponentsFactory {
 
     static func makeTitleTextView() -> UITextView {
-        let textView  = UITextView()
+        let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.backgroundColor = .white
         textView.font = .boldSystemFont(ofSize: 16)
@@ -27,7 +27,7 @@ enum DreamInfoComponentsFactory {
     }
 
     static func makeDescriptionTextView() -> UITextView {
-        let textView  = UITextView()
+        let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.textAlignment = .natural
         textView.isScrollEnabled = false

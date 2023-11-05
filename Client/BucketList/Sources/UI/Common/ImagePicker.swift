@@ -1,5 +1,5 @@
-import UIKit
 import Core
+import UIKit
 
 final class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -27,7 +27,7 @@ final class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigation
         if let image = info[.originalImage] as? UIImage {
             completion?(.success(image))
         } else {
-            completion?(.failure(NSError()))
+            completion?(.failure(NSError())) // swiftlint:disable:this discouraged_direct_init
         }
     }
 
