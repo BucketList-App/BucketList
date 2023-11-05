@@ -26,8 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         appCoordinator.start()
 
-        window!.rootViewController = router.toPresent()
-        window!.makeKeyAndVisible()
+        window?.rootViewController = router.toPresent()
+        window?.makeKeyAndVisible()
 
         return true
     }
