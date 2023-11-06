@@ -41,6 +41,13 @@ final class DreamListViewModel {
         StagedChangeset(source: dreams, target: target)
     }
 
+    // Поддержать sync стейта и данных в провайдере (middleware ?) для drag and drop
+    func moveItem(at sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let dream = dreams.remove(at: sourceIndexPath.item)
+        dreams.insert(dream, at: destinationIndexPath.item)
+        store.dispatch(DreamsListAction.update(dreams: dreams))
+    }
+
     func fetchDreams() {
         store.dispatch(dreamListThunkFactory.makeDreamsListInitialize())
     }

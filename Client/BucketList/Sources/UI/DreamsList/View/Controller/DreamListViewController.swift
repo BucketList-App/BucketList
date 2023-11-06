@@ -39,6 +39,7 @@ class DreamListViewController: UIViewController {
         setupCollectionView()
         setupRefreshControl()
         setupBasicNavigationBar()
+        setupLongPressGesture()
 
         store.subscribe(self) { subscription in
             subscription.select(\.dreamsListState)
@@ -123,7 +124,19 @@ extension DreamListViewController: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, canEditItemAt indexPath: IndexPath) -> Bool {
-        return viewModel.isEditingMode
+        viewModel.isEditingMode
+    }
+
+    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
+        viewModel.isEditingMode
+    }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        moveItemAt sourceIndexPath: IndexPath,
+        to destinationIndexPath: IndexPath
+    ) {
+        viewModel.moveItem(at: sourceIndexPath, to: destinationIndexPath)
     }
 
     func collectionView(
@@ -246,6 +259,31 @@ private extension DreamListViewController {
     func onDreamsVisibleCells(block: (([DreamListViewCell]) -> Void)) {
         let visibleCells = collectionView.visibleCells.compactMap { $0 as? DreamListViewCell }
         block(visibleCells)
+    }
+}
+
+private extension DreamListViewController {
+    func setupLongPressGesture() {
+        let longPressGesture = UILongPressGestureRecognizer(
+            target: self,
+            action: #selector(handleLongPressGesture(_:))
+        )
+        collectionView.addGestureRecognizer(longPressGesture)
+    }
+
+    @objc func handleLongPressGesture(_ gesture: UILongPressGestureRecognizer) {
+        let location = gesture.location(in: collectionView)
+        switch gesture.state {
+        case .began:
+            guard let targetIndexPath = collectionView.indexPathForItem(at: location) else { return }
+            collectionView.beginInteractiveMovementForItem(at: targetIndexPath)
+        case .changed:
+            collectionView.updateInteractiveMovementTargetPosition(location)
+        case .ended:
+            collectionView.endInteractiveMovement()
+        default:
+            collectionView.cancelInteractiveMovement()
+        }
     }
 }
 
