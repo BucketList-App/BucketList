@@ -19,13 +19,16 @@ final class DreamListViewModel {
 
     private let store: Store<AppState>
     private let dreamListThunkFactory: DreamListThunkFactory
+    private let sizeCaching: DreamListItemSizeSessionCaching
 
     init(
         store: Store<AppState>,
-        dreamListThunkFactory: DreamListThunkFactory
+        dreamListThunkFactory: DreamListThunkFactory,
+        sizeCaching: DreamListItemSizeSessionCaching
     ) {
         self.store = store
         self.dreamListThunkFactory = dreamListThunkFactory
+        self.sizeCaching = sizeCaching
     }
 
     func update(with dreams: [Dream]) {
@@ -41,11 +44,22 @@ final class DreamListViewModel {
         StagedChangeset(source: dreams, target: target)
     }
 
-    // Поддержать sync стейта и данных в провайдере (middleware ?) для drag and drop
+    // Поддержать sync стейта и данных в провайдере (в middleware ?) для drag and drop
     func moveItem(at sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let dream = dreams.remove(at: sourceIndexPath.item)
         dreams.insert(dream, at: destinationIndexPath.item)
         store.dispatch(DreamsListAction.update(dreams: dreams))
+    }
+
+    // Предусмотреть вариант запуска приложения уже их landscape режима. В таком случае
+    // можно заранее закешировать дефолты или вообще можно рассмотреть константные значения ячейки
+    func intercept(size: CGSize) -> CGSize {
+        if let cachedSize = sizeCaching.getSize(for: .portrait) {
+            return cachedSize
+        } else {
+            sizeCaching.cache(size)
+            return size
+        }
     }
 
     func fetchDreams() {

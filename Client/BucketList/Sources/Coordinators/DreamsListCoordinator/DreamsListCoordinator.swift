@@ -28,7 +28,8 @@ final class DreamsListCoordinator: BaseCoordinator, DreamsListCoordinatorOutput 
     override func start() {
         let viewModel = DreamListViewModel(
             store: store,
-            dreamListThunkFactory: dreamListThunkFactory
+            dreamListThunkFactory: dreamListThunkFactory,
+            sizeCaching: DreamListItemSizeSessionCaching.shared
         )
         let cellDI = CellDI(
             store: store,

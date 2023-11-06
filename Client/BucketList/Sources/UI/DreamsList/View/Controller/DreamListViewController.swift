@@ -35,6 +35,7 @@ class DreamListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = ColorPalette.DreamsList.background
 
         setupCollectionView()
         setupRefreshControl()
@@ -148,10 +149,9 @@ extension DreamListViewController: UICollectionViewDelegateFlowLayout {
         let cellWidth = (collectionView.frame.width - horizontalSpacing) / 2
 
         let verticalSpacing = 3 * (Constants.sectionInset.top + Constants.sectionInset.bottom)
-        let additionalHeight = 60.0
-        let cellHeight = (collectionView.frame.height - verticalSpacing - additionalHeight) / 3
+        let cellHeight = (collectionView.frame.height - verticalSpacing) / 3
 
-        return CGSize(width: cellWidth, height: cellHeight)
+        return viewModel.intercept(size: CGSize(width: cellWidth, height: cellHeight))
     }
 }
 
@@ -182,7 +182,7 @@ private extension DreamListViewController {
         collectionView.refreshControl = refreshControl
 
         collectionView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.edges.equalTo(view.safeAreaLayoutGuide)
         }
     }
 

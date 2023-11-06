@@ -41,6 +41,7 @@
 		2CFEB2AF2AF8530C00337DD9 /* CellDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEB2AE2AF8530C00337DD9 /* CellDI.swift */; };
 		2CFEB2B22AF862E600337DD9 /* DifferenceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2CFEB2B12AF862E600337DD9 /* DifferenceKit */; };
 		2CFEB2B52AF8650900337DD9 /* Dream+Differentiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEB2B42AF8650900337DD9 /* Dream+Differentiable.swift */; };
+		2CFEB2B82AF8F8C200337DD9 /* DreamListItemSizeSessionCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEB2B72AF8F8C200337DD9 /* DreamListItemSizeSessionCaching.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		2CFEB2AB2AF8442F00337DD9 /* DreamsList.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DreamsList.xcassets; sourceTree = "<group>"; };
 		2CFEB2AE2AF8530C00337DD9 /* CellDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDI.swift; sourceTree = "<group>"; };
 		2CFEB2B42AF8650900337DD9 /* Dream+Differentiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dream+Differentiable.swift"; sourceTree = "<group>"; };
+		2CFEB2B72AF8F8C200337DD9 /* DreamListItemSizeSessionCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListItemSizeSessionCaching.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 		2C3CCE602ACABB890030E5EC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2CFEB2B62AF8F82500337DD9 /* Cache */,
 				2C3CCE612ACABB990030E5EC /* DreamsProvider.swift */,
 				2C3CA5282ACDA507006D01A6 /* LaunchInstructor.swift */,
 				2CFEB2A22AF7F63A00337DD9 /* AppAssembler.swift */,
@@ -410,6 +413,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		2CFEB2B62AF8F82500337DD9 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				2CFEB2B72AF8F8C200337DD9 /* DreamListItemSizeSessionCaching.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -556,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CFEB2B82AF8F8C200337DD9 /* DreamListItemSizeSessionCaching.swift in Sources */,
 				2CFB38FB2ACE08E0001F687B /* DreamInfoCoordinatorOutput.swift in Sources */,
 				2C4D2E672AB9FB03005F731D /* DreamListViewController.swift in Sources */,
 				2C4D2E632AB9FB03005F731D /* AppDelegate.swift in Sources */,
