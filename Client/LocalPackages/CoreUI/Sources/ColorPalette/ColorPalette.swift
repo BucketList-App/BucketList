@@ -1,11 +1,16 @@
 import UIKit
 
+// swiftlint:disable nesting
 public enum ColorPalette {
-    public enum DreamsList {}
-}
 
-// Main screen with dreams
-public extension ColorPalette.DreamsList {
-    static let background: UIColor = .lightestGray
-    static let snippet: UIColor = .white
+    /** Main screen with dreams */
+    public enum DreamsList {
+        public static let background: UIColor = .lightestGray
+
+        public enum Snippet {
+            public static let background: UIColor = .white
+            public static let deleteBackground: UIColor = .white
+            public static let deleteBorder: UIColor = .lightGray
+        }
+    }
 }

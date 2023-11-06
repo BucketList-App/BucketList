@@ -1,8 +1,8 @@
 import Models
 
-struct DreamsProvider {
+final class DreamsProvider {
 
-    private let dreams: [Dream]
+    private var dreams: [Dream]
 
     init() {
         dreams = [
@@ -22,6 +22,10 @@ struct DreamsProvider {
 
     func provide() -> [Dream] {
         dreams
+    }
+
+    func update(_ dreams: [Dream]) {
+        self.dreams = dreams
     }
 
 }

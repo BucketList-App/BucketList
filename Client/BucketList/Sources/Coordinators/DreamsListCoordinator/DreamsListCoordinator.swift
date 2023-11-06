@@ -26,9 +26,18 @@ final class DreamsListCoordinator: BaseCoordinator, DreamsListCoordinatorOutput 
     }
 
     override func start() {
-        let dreamsVC = DreamListViewController(
+        let viewModel = DreamListViewModel(
             store: store,
             dreamListThunkFactory: dreamListThunkFactory
+        )
+        let cellDI = CellDI(
+            store: store,
+            dreamListThunkFactory: dreamListThunkFactory
+        )
+        let dreamsVC = DreamListViewController(
+            store: store,
+            viewModel: viewModel,
+            cellDI: cellDI
         )
         dreamsVC.openDream = { [weak self] dream in
             self?.runDreamInfoCoordinator(dream: dream)

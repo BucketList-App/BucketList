@@ -36,6 +36,11 @@
 		2CFB38FB2ACE08E0001F687B /* DreamInfoCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFB38FA2ACE08E0001F687B /* DreamInfoCoordinatorOutput.swift */; };
 		2CFB38FD2ACE1003001F687B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFB38FC2ACE1003001F687B /* ImagePicker.swift */; };
 		2CFEB2A32AF7F63A00337DD9 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEB2A22AF7F63A00337DD9 /* AppAssembler.swift */; };
+		2CFEB2A62AF8188900337DD9 /* DreamListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEB2A52AF8188900337DD9 /* DreamListViewModel.swift */; };
+		2CFEB2AC2AF8442F00337DD9 /* DreamsList.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CFEB2AB2AF8442F00337DD9 /* DreamsList.xcassets */; };
+		2CFEB2AF2AF8530C00337DD9 /* CellDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEB2AE2AF8530C00337DD9 /* CellDI.swift */; };
+		2CFEB2B22AF862E600337DD9 /* DifferenceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2CFEB2B12AF862E600337DD9 /* DifferenceKit */; };
+		2CFEB2B52AF8650900337DD9 /* Dream+Differentiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEB2B42AF8650900337DD9 /* Dream+Differentiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +91,10 @@
 		2CFB38FA2ACE08E0001F687B /* DreamInfoCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamInfoCoordinatorOutput.swift; sourceTree = "<group>"; };
 		2CFB38FC2ACE1003001F687B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		2CFEB2A22AF7F63A00337DD9 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
+		2CFEB2A52AF8188900337DD9 /* DreamListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListViewModel.swift; sourceTree = "<group>"; };
+		2CFEB2AB2AF8442F00337DD9 /* DreamsList.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DreamsList.xcassets; sourceTree = "<group>"; };
+		2CFEB2AE2AF8530C00337DD9 /* CellDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDI.swift; sourceTree = "<group>"; };
+		2CFEB2B42AF8650900337DD9 /* Dream+Differentiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dream+Differentiable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CFEB2B22AF862E600337DD9 /* DifferenceKit in Frameworks */,
 				2C3CCE3A2AC710C90030E5EC /* Models in Frameworks */,
 				2C3C490F2AC34E060030E5EC /* RealmSwift in Frameworks */,
 				2C3CCE372AC709A60030E5EC /* Core in Frameworks */,
@@ -171,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				2C4D2E6B2AB9FB04005F731D /* Assets.xcassets */,
+				2CFEB2AB2AF8442F00337DD9 /* DreamsList.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -205,7 +216,7 @@
 		2C3CCE442AC86ADD0030E5EC /* DreamsList */ = {
 			isa = PBXGroup;
 			children = (
-				2C3CCE4E2AC8B59B0030E5EC /* Controller */,
+				2CFEB2A42AF8187100337DD9 /* ViewModel */,
 				2C3CCE4D2AC8B5930030E5EC /* View */,
 			);
 			path = DreamsList;
@@ -225,7 +236,8 @@
 		2C3CCE4D2AC8B5930030E5EC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2C3CCE4F2AC8B5B50030E5EC /* DreamViewCell.swift */,
+				2C3CCE4E2AC8B59B0030E5EC /* Controller */,
+				2CFEB2A72AF81F9F00337DD9 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,6 +353,8 @@
 		2CFB38F52ACDFA6F001F687B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2CFEB2B32AF864FA00337DD9 /* Extensions */,
+				2CFEB2AD2AF852FD00337DD9 /* Helpers */,
 				2CFB38FC2ACE1003001F687B /* ImagePicker.swift */,
 			);
 			path = Common;
@@ -362,6 +376,38 @@
 				2CFB38FA2ACE08E0001F687B /* DreamInfoCoordinatorOutput.swift */,
 			);
 			path = DreamInfoCoordinator;
+			sourceTree = "<group>";
+		};
+		2CFEB2A42AF8187100337DD9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2CFEB2A52AF8188900337DD9 /* DreamListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2CFEB2A72AF81F9F00337DD9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2C3CCE4F2AC8B5B50030E5EC /* DreamViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2CFEB2AD2AF852FD00337DD9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2CFEB2AE2AF8530C00337DD9 /* CellDI.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2CFEB2B32AF864FA00337DD9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2CFEB2B42AF8650900337DD9 /* Dream+Differentiable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +434,7 @@
 				2C3CCE392AC710C90030E5EC /* Models */,
 				2C3CCE522AC8B6C00030E5EC /* SnapKit */,
 				2C3CCE582AC8ECCA0030E5EC /* CoreUI */,
+				2CFEB2B12AF862E600337DD9 /* DifferenceKit */,
 			);
 			productName = BucketList;
 			productReference = 2C4D2E5F2AB9FB03005F731D /* BucketList.app */;
@@ -464,6 +511,7 @@
 			packageReferences = (
 				2C3C490B2AC34E060030E5EC /* XCRemoteSwiftPackageReference "realm-swift" */,
 				2C3CCE512AC8B6C00030E5EC /* XCRemoteSwiftPackageReference "SnapKit" */,
+				2CFEB2B02AF862E600337DD9 /* XCRemoteSwiftPackageReference "DifferenceKit" */,
 			);
 			productRefGroup = 2C4D2E602AB9FB03005F731D /* Products */;
 			projectDirPath = "";
@@ -483,6 +531,7 @@
 			files = (
 				2C4D2E6F2AB9FB04005F731D /* LaunchScreen.storyboard in Resources */,
 				2C4D2E6C2AB9FB04005F731D /* Assets.xcassets in Resources */,
+				2CFEB2AC2AF8442F00337DD9 /* DreamsList.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,11 +563,14 @@
 				2C3CB2F62ACDC0EC006D01A6 /* DreamListThunkFactory.swift in Sources */,
 				2C3CB2F42ACDC0DB006D01A6 /* DreamListThunk.swift in Sources */,
 				2C3CB2EB2ACDB99D006D01A6 /* CoordinatorsFactory.swift in Sources */,
+				2CFEB2AF2AF8530C00337DD9 /* CellDI.swift in Sources */,
 				2CFB38FD2ACE1003001F687B /* ImagePicker.swift in Sources */,
 				2C3CA52B2ACDA87A006D01A6 /* DreamInfoCoordinator.swift in Sources */,
 				2C3CCE502AC8B5B50030E5EC /* DreamViewCell.swift in Sources */,
 				2CFB38F82ACE0794001F687B /* DreamsListCoordinatorOutput.swift in Sources */,
+				2CFEB2B52AF8650900337DD9 /* Dream+Differentiable.swift in Sources */,
 				2C3CA5272ACDA482006D01A6 /* AppCoordinator.swift in Sources */,
+				2CFEB2A62AF8188900337DD9 /* DreamListViewModel.swift in Sources */,
 				2CFB2B382ACDF6B2001F687B /* DreamInfoComponentsFactory.swift in Sources */,
 				2CFEB2A32AF7F63A00337DD9 /* AppAssembler.swift in Sources */,
 				2C3CCE622ACABB990030E5EC /* DreamsProvider.swift in Sources */,
@@ -621,7 +673,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -675,7 +727,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -875,6 +927,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		2CFEB2B02AF862E600337DD9 /* XCRemoteSwiftPackageReference "DifferenceKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ra1028/DifferenceKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -908,6 +968,11 @@
 		2C3CCE582AC8ECCA0030E5EC /* CoreUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CoreUI;
+		};
+		2CFEB2B12AF862E600337DD9 /* DifferenceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2CFEB2B02AF862E600337DD9 /* XCRemoteSwiftPackageReference "DifferenceKit" */;
+			productName = DifferenceKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
