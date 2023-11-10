@@ -14,7 +14,8 @@ let package = Package(
     targets: [
         .target(
             name: "Models",
-            dependencies: []
+            dependencies: [],
+            path: "Sources"
         )
     ]
 )

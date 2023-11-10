@@ -18,6 +18,7 @@ class DreamListViewCell: UICollectionViewCell {
     private var dream: Dream? {
         didSet {
             titleLabel.text = dream?.title ?? ""
+            imageView.image = dream?.image
         }
     }
 
