@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1C20972B01291C00D7C52D /* ReuseIdentifiable in Frameworks */ = {isa = PBXBuildFile; productRef = 2C1C20962B01291C00D7C52D /* ReuseIdentifiable */; };
 		2C26B3B92ABA0680000FF7D6 /* State in Frameworks */ = {isa = PBXBuildFile; productRef = 2C26B3B82ABA0680000FF7D6 /* State */; };
 		2C3C490D2AC34E060030E5EC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3C490C2AC34E060030E5EC /* Realm */; };
 		2C3C490F2AC34E060030E5EC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2C3C490E2AC34E060030E5EC /* RealmSwift */; };
@@ -104,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1C20972B01291C00D7C52D /* ReuseIdentifiable in Frameworks */,
 				2CFEB2B22AF862E600337DD9 /* DifferenceKit in Frameworks */,
 				2C3CCE3A2AC710C90030E5EC /* Models in Frameworks */,
 				2C3C490F2AC34E060030E5EC /* RealmSwift in Frameworks */,
@@ -446,6 +448,7 @@
 				2C3CCE522AC8B6C00030E5EC /* SnapKit */,
 				2C3CCE582AC8ECCA0030E5EC /* CoreUI */,
 				2CFEB2B12AF862E600337DD9 /* DifferenceKit */,
+				2C1C20962B01291C00D7C52D /* ReuseIdentifiable */,
 			);
 			productName = BucketList;
 			productReference = 2C4D2E5F2AB9FB03005F731D /* BucketList.app */;
@@ -523,6 +526,7 @@
 				2C3C490B2AC34E060030E5EC /* XCRemoteSwiftPackageReference "realm-swift" */,
 				2C3CCE512AC8B6C00030E5EC /* XCRemoteSwiftPackageReference "SnapKit" */,
 				2CFEB2B02AF862E600337DD9 /* XCRemoteSwiftPackageReference "DifferenceKit" */,
+				2C1C20952B01291C00D7C52D /* XCRemoteSwiftPackageReference "ReuseIdentifiable" */,
 			);
 			productRefGroup = 2C4D2E602AB9FB03005F731D /* Products */;
 			projectDirPath = "";
@@ -923,6 +927,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2C1C20952B01291C00D7C52D /* XCRemoteSwiftPackageReference "ReuseIdentifiable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gleb032/ReuseIdentifiable.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.0;
+			};
+		};
 		2C3C490B2AC34E060030E5EC /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -950,6 +962,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2C1C20962B01291C00D7C52D /* ReuseIdentifiable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C1C20952B01291C00D7C52D /* XCRemoteSwiftPackageReference "ReuseIdentifiable" */;
+			productName = ReuseIdentifiable;
+		};
 		2C26B3B82ABA0680000FF7D6 /* State */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = State;

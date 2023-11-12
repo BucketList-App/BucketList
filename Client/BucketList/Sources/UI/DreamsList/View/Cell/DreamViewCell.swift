@@ -5,7 +5,9 @@ import ReSwift
 import SnapKit
 import State
 import UIKit
+import ReuseIdentifiable
 
+@ReuseIdentifiable
 class DreamListViewCell: UICollectionViewCell {
 
     private lazy var imageView = makeImageView()
